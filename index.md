@@ -1,5 +1,4 @@
-## Welcome to my Page!
-### KUSHAR DOGRA
+# KUSHAR DOGRA
 ### email id: dograkushar@gmail.com
 ### Phone Number: +91 9971021452
 ### LinkedIn: [Kushar Dogra](https://www.linkedin.com/in/kushar-dogra/).
