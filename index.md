@@ -6,5 +6,5 @@
 
 _Here I are some of the webistes that I have created for practice or as an assignment for some course._
 
-Restaurant Menu Website: **[Assignment for a course](https://kushardogra.github.io/kushar/Restaurant/)**
+1. Restaurant Menu Website: **[Assignment for a course](https://kushardogra.github.io/kushar/Restaurant/)**
 
