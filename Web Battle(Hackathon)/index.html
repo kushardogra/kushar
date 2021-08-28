@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Apple | Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='index.js'></script>
+</head>
+<body>
+    <section class="showcase active">
+        <header>
+            <a href="index.html">
+                <img src="images/qwert.png" class="logo">
+            </a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html" class="menu">Home</a>
+                <a href="about.html"class="menu">About</a>
+                <a href="contact.html"class="menu">Contact</a>
+                <a href="models.html"class="menu">Models</a>
+                <a href="gallery.html"class="menu">Gallery</a>
+              </div>
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        </header>
+        <div>
+            <video src="images/videoplayback (2).mp4" muted loop autoplay ></video>
+            <audio   src="images/ReachingtheSkyLongVersion-320bit.mp3" autoplay >
+                <script>
+                    var audio = document.currentScript.parentElement;
+                    audio.volume = 0.3;
+                    
+                    </script>
+            </audio>
+            <div class="overlay"></div>
+            <div class="text">
+                <h2>Macbook</h2>   
+            </div>
+        </div>
+        <br>
+        <!-- <div>
+            <video src="images/videoplayback (2).mp4" muted loop autoplay class="c2"></video>
+            <div class="overlay"></div>
+            <div class="text">
+                <h2>iPad</h2>   
+            </div>
+        </div>         -->
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="models.html">Models</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </div>
+</body>
+</html>
