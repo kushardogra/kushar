@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DiaryFi | Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'main.css' %}'>
+    <script src='{% static 'index.js' %}'></script>
+</head>
+<body>
+    <section class="showcase active">
+        <header>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/lg.png' %}" class="logo">
+            </a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="{% url 'home' %}" class="menu">Home</a>
+                <a href="{% url 'add' %}"class="menu">Add New</a>
+                <a href="{% url 'old' %}"class="menu">Old Daily Entries</a>
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'sign' %}" class="menu">LogOut</a>
+              </div>
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        </header>
+        <div>
+            <img src="{% static 'images/bg.jpg' %}" alt="" class="bg">
+            <audio   src="{% static 'images/ReachingtheSkyLongVersion-320bit.mp3' %}" autoplay >
+                <script>
+                    var audio = document.currentScript.parentElement;
+                    audio.volume = 0.4;
+                    
+                    </script>
+            </audio>
+            <div class="overlay"></div>
+            <div class="text">
+                <h1>Hi! {{ request.user }}</h1>
+                <h6>Welcome Back</h6>
+            </div>
+        </div>
+        <br>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'add' %}">Add New</a></li>
+            <li><a href="{% url 'old' %}">Old Daily Entries</a></li>
+            <br>
+            <br>
+            <br>
+            <li><a href="{% url 'sign' %}">LogOut</a></li>
+        </ul>
+    </div>
+</body>
+</html>

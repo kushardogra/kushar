@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.open{
+    left: 90%;
+}
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100% ;
+    min-height: 100vh;   
+    padding: 00px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 2;
+}
+.showcase .active{
+    right: 300px;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 40px 100px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-top: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+    width: 175px;
+    height: 75px;
+}
+
+
+.showcase .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.text {
+    position: absolute;
+    z-index: 10;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: left;
+    left: 70px;
+}
+.closebtn{
+    position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: orange;
+}
+.menu{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center; 
+}
+.menu:hover{
+    color: orange;
+    font: bold;
+    font-weight: bold;
+    font-size: 35px;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Stay on top */
+    top:0; 
+    right: 0;
+    background-color: black; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+.menu ul{
+    position: relative;
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+.menu ul li a:hover{
+    color: orange;
+    font: bold;
+    font-weight: bold;
+    font-size: 35px;
+}
+.showcase .bg{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+    opacity: 30%;
+}
+.content{
+    color: white;
+    position: fixed;
+    z-index: 2;
+    font-size: 20px;
+    text-align: left;
+    top: 200px;
+    left: 180px;
+    width: 70%;
+    text-align: justify;
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(orange,lightgoldenrodyellow );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.wrapper{
+    background: black ;
+    opacity: 80%;
+    margin: 100px auto;
+    max-width: 1100px;
+    z-index: 5;
+}
+.wrapper nav{
+    display: flex;
+    justify-content: center;
+}
+nav .names{
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    background: black;
+}
+nav .names .item{
+    padding: 7px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+nav .names .item:hover{
+    color: orange;
+    font-size: 30px;
+}
+
+
+.c2{
+    top: 500px;
+}
+.social .bg{
+    display: inline-block;
+    width:100px;
+    justify-content: center;
+    align-items: center;
+    left: 100px;
+    padding-right:10px;
+    padding-left: 10px;
+    height: 50px;
+}
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.adminftncontainer{
+    border: 2px solid orange;
+    border-radius: 20px;
+    height: 480px;
+    width: 80%;
+    margin: auto;
+    overflow: auto; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    z-index: 3;
+}
+
+
+@media(max-width:798px){
+    .showcase, .showcase header{
+        padding: 40px;
+        }
+    
+    .logo{
+        width: 100px;
+        height: 75px;
+    }
+    .text{
+        font-size: 25px;
+    }
+    .content{
+        left: 50px;
+    }
+    .sidenav {
+        padding-top: 15px;
+    }
+    
+}

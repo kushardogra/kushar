@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiaryFi | Add New</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'out.css' %}">
+    <script src="{% static 'index.js' %}"></script>
+</head>
+<body>
+    <section class="showcase active">
+        <header>
+            <a href="{% url 'home' %}">
+                <img src="{% static "images/lg.png"%}" class="logo">
+            </a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="{% url 'home' %}" class="menu">Home</a>
+                <a href="{% url 'add' %}"class="menu">Add New</a>
+                <a href="{% url 'old' %}" class="menu">Old Daily Entries</a>
+                <br>
+                <br>
+                <br>
+                <a href="{% url 'sign' %}"class="menu">LogOut</a>
+            </div>
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        </header>
+        <img src="{% static "images/er.jp" %}" alt="" class="bg">
+        < class="container">
+            {% for diary in contents %}
+            <div class="mn">
+                <div class="heading">
+                    <h2>Today's Diary Entry</h2>
+                    <div class="local">
+                        <p >Date/Time: <span id='datetime'></span></p>
+                        <script>
+                            var dt = new Date();
+                            document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+                        </script>
+                    </div>
+                </div>
+                <div class="d_name">
+                    <span>Dear</span>
+                </div>
+                <div class="contcont">
+                    <div class="content">
+                        <span>{{ content }}</span>
+                    </div>
+                    <div class="image">
+                        <img src="{{ photo }}">
+                    </div>
+                </div>
+            </div>
+         {% endfor %}
+        </div> 
+           
+    </section>
+    
+</body>
+</html>

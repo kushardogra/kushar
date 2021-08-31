@@ -1,0 +1,373 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+}
+.btn-primary{
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  height: 46px;
+  line-height: 29px;
+  border-radius: 34px;
+  margin-left: 10%;
+  padding: 6px 70px ;
+}
+
+.btn-primary:hover{
+  color:orange;
+}
+
+/*SCROLLBAR*/ 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    cursor:grabbing;
+    background: orange; 
+  }
+header{
+    background-color: #fff;
+    display:block;
+    padding:10px 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    margin: 0px;
+    
+}
+/*NAVBAR*/
+/* Add a black background color to the top navigation */
+header .topnav {
+  background-color: #fff;
+  overflow: hidden; 
+}
+  
+/* Style the links inside the navigation bar */
+header .topnav a {
+  float: left;
+  color: Black;
+  text-align: center;
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+/* Change the color of links on hover */
+header .topnav a:hover {
+  /* background-color:; */
+  color: grey;
+}
+
+/* Add a color to the active/current link */
+header .topnav a.active {
+  /* background-color:; */
+  color: black;
+}
+header .logo{
+  width: 206px;
+  height:50px;
+  display: block;
+  float: left;
+}
+input{
+    display: none;
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+    text-align: center;
+}
+.bg img {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    height: 500px;
+    filter: blur(2px);
+}
+.bg {
+    position: relative;
+    text-align: center;
+}
+.centered{
+    position:absolute ;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    opacity: 50%;
+    color: white;
+    border: 3px solid #fff;
+    letter-spacing: 4px;
+    font-size: 40px;
+    font-family: "segoeuibold", sans-serif;
+    display: inline;
+    padding: 10px 30px 10px;
+}
+.top-content{
+    border-bottom: 1px solid orange;
+    border-top: 1px solid orange;
+       background-color:black;
+    width: 100%;
+    padding-top: 0;
+    margin-top: -4px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+/*FILTER*/
+.top-content h3{
+    color:White ;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0 50px;
+}
+.top-content .btn-nav{
+    margin-left: 5%;
+}
+
+.top-content #myInput{
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border-radius: 20px;
+  border: 1px solid #1B2840;
+  display: block;
+}
+
+.top-content #myInput:focus {outline: none;}
+
+.top-content .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.top-content .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 90%;
+  margin-left: 5%;
+  height: 170px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.top-content .dropdown-content option{
+  color: #85CEBC;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+.top-content .dropdown option:hover {
+    color: #ffffff;
+    border: 1px solid #85CEBC;
+}
+
+.top-content .show {display: block;}
+
+.raised{
+    z-index: 1;
+}
+
+.card {
+  box-shadow: 0px 3px 6px #1B2840;
+  border-radius: 15px;
+  border: 1px solid orange;
+	transition: 0.3s;
+	color: white;
+	background-color: black;
+	margin: 20px;
+	width: 30%;
+	text-align: center;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: bold;
+  height: auto;
+  position: relative;
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 6; /* Stay on top */
+  top:0; 
+  right: 0;
+  background-color: black; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav .closebtn {
+  position: relative;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+.sidenav .closebtn:hover{
+  color: orange;
+  transform: translateZ(-100px) rotateY(-90deg);
+}
+.menu ul{
+  left: 35%;
+  top: 50%;
+  position: relative;
+  list-style: none;
+  z-index: 3;
+}
+.menu ul li a{
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+}
+.menu ul li a:hover{
+  color: orange;
+  font: bold;
+  font-weight: bold;
+  font-size: 35px;
+}
+.open{
+  position:absolute ;
+    top: 50px;
+    left: 93%;
+    transform: translate(-50%,-50%);
+    color:#fff ;
+    font-size:10px;
+    display: inline; 
+    z-index: 3; 
+}
+.open:hover{
+  color: orange;
+}
+.containermain{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    
+}
+.card:hover {
+	box-shadow: 0 8px 16px 0 orange;
+  border: 1px solid lightgoldenrodyellow;
+}
+.viewprofilebutton {
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+    margin-top: 40px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    height: 46px;
+    line-height: 29px;
+    border-radius: 34px;
+    
+    padding: 6px 70px;
+}
+p{
+  color: white;
+  font-size: 25px;
+}
+
+.image1 {
+    position: relative;
+    overflow: visible;
+  	display: block;
+    height: 180px;
+  	width: 100%;
+    border-radius: 15px;
+    background-color: black;
+    opacity: 30%;
+}
+.orgname{
+  margin-top: 10px;
+width: 100%;
+height: 50px;
+  font-size: 15px;
+  color: #1B2840;
+}
+.centeredpic{
+  position:absolute ;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color:#fff ;
+  border: 6px solid #ffffff;
+  letter-spacing: 4px;
+  font-size:20px;
+  display: inline;
+  padding: 10px 30px 10px;
+}
+.orgbut{
+width: 100%;
+}
+.dt{
+  font-size: 30px;
+  color: orange;
+}
+
+.bt{
+  color: white;
+  width: 100px;
+  font-size: 25px;
+  border:2px solid orange;
+  border-radius: 30px;
+}
+.bt:hover{
+  color: orange;
+  border:2px solid white;
+}
+
+
+
+
+@media(max-width:750px) {
+	.card {
+	  	width: 80%;
+	  	margin:15px;
+	}
+	.containermain{
+	  	margin-left: 3%;
+	  	margin-right: 1%;
+	  	padding: 0;
+		margin-top: -10px;
+	}
+  .btn-primary{
+    display: flex;
+    font-size: 5px;
+    padding: 1px 40px;
+  }
+  .top-content .btn-nav{
+    margin-left: 1%;
+  }
+}

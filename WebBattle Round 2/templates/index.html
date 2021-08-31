@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' >
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Student Log-In</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'sign.css' %}'>
+    <script src='{% static 'main.js' %}'></script>
+</head>
+<body>
+    <img src="{% static 'images/fr.jpg' %}" alt="" class="bg">
+	<header>
+        <div class="logo">
+                <img src="{% static 'images/lg-removebg-preview.png' %}" class="logo">
+        </div>
+    </header>
+    
+    <div></div>
+    <div class="container container-center">
+		<h1 class="intro"> Sign In</h1>
+		<form action="" method="post">
+            {% csrf_token %}
+			<div class="input_type">Username:</div>
+			<div class="uname" data-validate="Please Enter Username">
+				<input type="text" name="uname" placeholder=" Enter Username" required>
+			</div>
+			<div class="input_type">Password:</div>
+			<div class="pwd" data-validate="Please Enter Password">
+				<input type="password" name="pwd" placeholder="Enter Password" required>
+			</div>
+			<button type="submit"> Sign In </button>
+			<br>
+		</form>  
+</body>
+</html>

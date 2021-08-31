@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, intial-scale=1, 0"> 
+        <title> </title>  
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'main.js' %}">
+    </head>
+    <body>
+        <script>
+       
+        function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+        </script>
+        <div>
+            <div class="bg">
+                <img src="{% static 'images/bg.jpg' %}">
+                <h1 class="centered">Old Daily Diary Entries</h1>
+                <span style="font-size:30px; cursor:pointer" onclick="openNav()" class="open">&#9776; open</span>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.html" class="menu">Home</a>
+                    <a href="add_new.html"class="menu">Add New</a>
+                    <a href="old_daily_entries.html"class="menu">Old Daily Entries</a>
+                  </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'add' %}">Add New</a></li>
+                        <li><a href="{% url 'old' %}">Old Daily Entries</a></li>
+                        <br>
+                        <br>
+                        <br>
+                        <li><a href="{% url 'sign' %}">LogOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="containermain" class="containermain">
+            {% for diary in contents %}
+            <div class="card" id="airpods">
+                <div class="entry">
+                    <div class="dt">Date:{{ diary.Date }}</div>
+                    <div>
+                        <button class="bt" href="{% url 'view' %}">View</button>
+                    </div>
+                </div>
+            </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+    <script>
+        displaycards(1);
+    </script>
+</html>
